@@ -16,6 +16,7 @@ export function buildWebpackConfig({paths, mode}: BuildOptions): Configuration  
         path: paths.build,
         clean: true
     },
+    devtool: "inline-source-map",
     plugins: buildPlugins({paths}),
     module: {
         rules: buildLoaders(),
